@@ -21,7 +21,7 @@ h3{
     color: var(--light);
 }
 
-.container{
+.navbar-container{
     max-width: 1250px;
     margin: 0 auto;
     display: flex;
@@ -95,6 +95,14 @@ nav{
     margin: 0 -16px;
 }
 
+.list{
+    margin: 2.5rem 0;
+}
+
+.menu.active{
+    left: 0;
+}
+
 .menu a{
     color: var(--light);
     margin: 0 16px;
@@ -115,5 +123,6 @@ nav{
     }
     .menu{
         display: flex;
+        
     }
 }
