@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Noto+Serif&family=Roboto+Condensed:ital,wght@1,300&family=Roboto+Slab&family=Updock&family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Noto+Serif&family=Roboto+Condensed:ital,wght@1,300&family=Roboto+Slab&family=Tiro+Devanagari+Marathi&family=Updock&family=Whisper&display=swap');
 
 :root{
     /* Jadi kalian disini ambil color buat text / background yang ada di dalam sini */
@@ -18,6 +18,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--main-font);
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 /* Navbar Styling; by @Jounny */
@@ -209,7 +217,101 @@
 /* --------------------- Navbar ---------------------- */
 
 /* Home Styling; by @Jounny */
+
 #home{
-    width: 100%;
-    height: 100%;
+    background :var(--background);
 }
+
+.home-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: var(--background);
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.home-content{
+    color: var(--text-color);
+    width: 100%;
+}
+
+.home-content h1, .home-content h2{
+    font-size: 3.2rem;
+    margin-top: 10px;
+    background: #A564FF;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.home-content-line{
+    width: 72%;
+    margin-top: 5px;
+
+}
+
+.main-content p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.home-btn{
+    font-size: 1rem;
+    background: var(--first-color);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.home-btn a{
+    position: relative;
+    z-index: 2;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.home-btn::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #4837ff;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.home-btn:hover{
+    background: transparent;
+    color: var(--first-color);
+}
+.home-btn:hover:after{
+    color: var(--text-color)
+}
+.home-img-container{
+    text-align: center;
+}
+.home-img{
+    height: 100%;
+    width: 100%;
+}
+
+/* --------------------- Home ---------------------- */
