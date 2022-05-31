@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Noto+Serif&family=Roboto+Condensed:ital,wght@1,300&family=Roboto+Slab&family=Updock&family=Whisper&display=swap');
 
 :root{
+    /* Jadi kalian disini ambil color buat text / background yang ada di dalam sini */
+    /* Kalau mau nambah silahkan tapi sebelum itu koordinasikan dlu di group */
+    /* cara pemakaiannya = color:var(--namanya-sesuaikan); */
     --first-color: #8c38ff;
     --second-color: #b490ca;
     --third-color: #5ee7df;
     --gradient-color: linear-gradient(to top, #8933ec 0%, #fed6e3 100%);
     --text-color: #EEEEEE;
     --background: #212121;
+    --main-font: 'Noto Sans JP', sans-serif;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Noto Sans JP', sans-serif;
+    font-family: var(--main-font);
 }
 
 /* Navbar Styling; by @Jounny */
@@ -203,3 +207,9 @@
     }
 }
 /* --------------------- Navbar ---------------------- */
+
+/* Home Styling; by @Jounny */
+#home{
+    width: 100%;
+    height: 100%;
+}
