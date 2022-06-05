@@ -1,0 +1,37 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 90vh;
+    background-color: var(--background);
+    z-index: 1;
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    margin: 0 150px;
+}
+
+.about-content h1 p {
+    margin: 150px;
+}
+
+.about-content h1 {
+    color: var(--first-color);
+    font-size: 3.2rem;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    background: #A564FF;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.about-content p {
+    color: var(--text-color);
+}
