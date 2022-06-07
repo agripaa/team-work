@@ -10,6 +10,7 @@
     --gradient-color: linear-gradient(to top, #8933ec 0%, #fed6e3 100%);
     --text-color: #EEEEEE;
     --background: #212121;
+    --background-navbar: #0e0d0d;
     --main-font: 'Noto Sans JP', sans-serif;
 }
 
@@ -31,7 +32,7 @@
 /* Navbar Styling; by @Jounny */
 
 .navbar{
-    background: var(--background);
+    background: var(--background-navbar);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -110,18 +111,18 @@
 
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 5px 10px;
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  background: var(--first-color);
-  color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: var(--first-color);
+    color: var(--text-color);
 }
 
 .button:hover{
