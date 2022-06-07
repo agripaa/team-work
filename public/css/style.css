@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&family=Noto+Serif&family=Roboto+Condensed:ital,wght@1,300&family=Roboto+Slab&family=Tiro+Devanagari+Marathi&family=Updock&family=Whisper&display=swap');
+
+:root{
+    /* Jadi kalian disini ambil color buat text / background yang ada di dalam sini */
+    /* Kalau mau nambah silahkan tapi sebelum itu koordinasikan dlu di group */
+    /* cara pemakaiannya = color:var(--namanya-sesuaikan); */
+    --first-color: #8c38ff;
+    --second-color: #b490ca;
+    --third-color: #5ee7df;
+    --gradient-color: linear-gradient(to top, #8933ec 0%, #fed6e3 100%);
+    --text-color: #EEEEEE;
+    --background: #212121;
+    --background-navbar: #0e0d0d;
+    --main-font: 'Noto Sans JP', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    scroll-behavior: smooth;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* Navbar Styling; by @Jounny */
+
+.navbar{
+    background: var(--background-navbar);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#nav-logo{
+    background-color: var(--primary);
+    background-image: var(--gradient-color);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.nav-icons{
+    margin-right: 0.5rem;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-item{
+    height: 80px;
+}
+
+.nav-links{
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1.5rem;
+    height: 100%;
+}
+
+.nav-links:hover{
+    color: var(--first-color);
+    transition: all 1s ease;
+}
+
+.nav-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px 10px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: var(--first-color);
+    color: var(--text-color);
+}
+
+.button:hover{
+    background: transparent;
+    color: var(--first-color);
+    transition: all 1s ease;
+}
+
+@media screen and (max-width: 960px){
+    .navbar-container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .nav-menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background-color:#212121;
+    }
+    .nav-menu.active{
+        background: var(--background);
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+    #nav-logo{
+        padding-left: 25px;
+    }
+    .navbar-toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    .nav-item{
+        width: 100%;
+    }
+    .nav-links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;  
+    }
+    .nav-btn{
+        padding-bottom: 2rem;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .navbar-toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+/* --------------------- Navbar ---------------------- */
+
+/* Home Styling; by @Jounny */
+
+#home{
+    background :var(--background);
+}
+
+.home-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: var(--background);
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.home-content{
+    color: var(--text-color);
+    width: 100%;
+}
+
+.home-content h1, .home-content h2{
+    font-size: 3.2rem;
+    margin-top: 10px;
+    background: #A564FF;
+    font-family: 'Tiro Devanagari Marathi', serif;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.home-content-line{
+    width: 72%;
+    margin-top: 5px;
+
+}
+
+.main-content p{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.home-btn{
+    font-size: 1rem;
+    background: var(--first-color);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.home-btn a{
+    position: relative;
+    z-index: 2;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.home-btn::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #4837ff;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.home-btn:hover{
+    background: transparent;
+    color: var(--first-color);
+}
+.home-btn:hover:after{
+    color: var(--text-color)
+}
+.home-img-container{
+    text-align: center;
+}
+.home-img{
+    height: 100%;
+    width: 100%;
+}
+
+/* --------------------- Home ---------------------- */
